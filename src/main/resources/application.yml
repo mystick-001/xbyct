@@ -1,0 +1,4 @@
+#Spring Boot 配置
+spring:
+  application:
+    name: xbyct
