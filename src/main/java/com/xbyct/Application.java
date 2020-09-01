@@ -66,6 +66,8 @@ public class Application implements CommandLineRunner {
 				RecordManager.getInstance().explainLine(line);
 			}
 		}
+		
+		System.exit(0);
 
 	}
 
