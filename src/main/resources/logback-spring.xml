@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="60 seconds">
+
+	<contextName>xbyct</contextName>
+
+	<!-- 常用日志 -->
+	<logger name="org.apache.http" level="INFO" />
+	<logger name="org.springframework" level="INFO" />
+    <logger name="com.apache.ibatis" level="INFO"/>
+    <logger name="java.sql.Connection" level="INFO"/>
+    <logger name="java.sql.Statement" level="INFO"/>
+    <logger name="java.sql.PreparedStatement" level="INFO"/>
+    <logger name="com.netflix" level="ERROR"/>
+    <logger name="reactor.ipc" level="ERROR"/>
+    <logger name="c.netflix" level="ERROR"/>
+	<logger name="com.alibaba.nacos" level="ERROR"/>
+    
+	<!-- 日志输出到控制台 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[%d{yyy-MM-dd HH:mm:ss.SSS} %thread %level %logger{50}] %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+    <root level="DEBUG">
+    	<appender-ref ref="STDOUT" />
+    </root>
+      
+</configuration>
